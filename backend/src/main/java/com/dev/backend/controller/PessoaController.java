@@ -11,9 +11,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dev.backend.entity.Pessoa;
+import com.dev.backend.repository.PessoaRepository;
 import com.dev.backend.service.PessoaService;
 
 @RestController
@@ -22,6 +24,9 @@ public class PessoaController {
 
    @Autowired
    private PessoaService pessoaService;
+
+   @Autowired
+   private PessoaRepository r;
     
    @GetMapping("/")
    public List<Pessoa> buscarTodos(){
@@ -43,4 +48,9 @@ public class PessoaController {
         pessoaService.excluir(id);
         return ResponseEntity.ok().build();
     }
+
+    @RequestMapping(value = "/")
+	public List<Pessoa> findByName(@RequestParam(name = "nome", required = true) String nome){
+		return r.findByNomeLike(nome);		
+	}
 }
