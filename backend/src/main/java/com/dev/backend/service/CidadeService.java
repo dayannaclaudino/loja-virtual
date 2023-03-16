@@ -22,7 +22,7 @@ public class CidadeService {
 
     public Cidade inserir(Cidade cidade){
         cidade.setDataCriacao(new Date());
-        return cidadeRepository.save(cidade);
+        return cidadeRepository.saveAndFlush(cidade);
     }
 
     public Cidade alterar(Cidade cidade){
