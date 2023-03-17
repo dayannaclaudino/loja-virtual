@@ -22,7 +22,7 @@ import lombok.Data;
 public class PermissaoPessoa {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
     @ManyToOne
