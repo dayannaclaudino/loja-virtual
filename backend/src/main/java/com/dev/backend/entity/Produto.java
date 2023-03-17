@@ -20,7 +20,7 @@ import lombok.Data;
 public class Produto {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
     private String descricaoCurta;
