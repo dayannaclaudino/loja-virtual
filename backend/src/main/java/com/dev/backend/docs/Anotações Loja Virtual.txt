@@ -1,0 +1,35 @@
+
+Padrão Dto:  Ao cadastrar um cliente vai inserir as permissoes 
+e não queremos que o usuario cliente veja ou insira isso  
+Pra isso vamos utilizar o padrão Dto pra definir exatamente as 
+informações que vai receber na requisição. 
+
+
+winqppqxrahxlfvc
+
+
+Fremaker para formatar o email
+
+
+
+
+
+Git - como usar 
+
+o que está desenvolvendo coloca na back-crud-estado (console)
+git add * 
+git commit -m "nome" 
+git push 
+
+
+Ir no github e fazer o PullRequest 
+
+Aba Pull Requests 
+Compare & pull request 
+Base: main v
+escolhe a opção "desenvolvimento"
+Create pull request
+Merge pull request 
+
+Volta no console 
+e da um git pull para atualizar a branch "desenvolvimento" 
